@@ -3,6 +3,8 @@ import "../styles/global.css";
 
 //import components
 import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
 interface Props {
 	title?: string;
 	description?: string;
@@ -27,8 +29,9 @@ const {
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="min-h-screen grid grid-rows-[auto, 1fr, auto]">
+	<body class="min-h-screen flex flex-col">
 		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
