@@ -1,8 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HomeHero from '@components/HomeHero.astro';
 
 ---
 
 <Layout title="Welcome to Astro.">
-	<h1c class="text-4xl font-bold text-amber-500">Astro Ground Zero</h1c>
+
+<main class="flex-1 mt-14">
+	<HomeHero
+		tagline='a simple Astro starter'
+		headline='Astro Ground Zero'
+		subheadline="with Tailwindcss, astro-icon and making use of the tailwind.config file. You will also find a basic button and card component so your will not have to start from scratch. "
+		'
+	/>
+</main>
+
 </Layout>
