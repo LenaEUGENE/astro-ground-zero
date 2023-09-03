@@ -1,11 +1,14 @@
 ---
 //import library
 import { Icon } from 'astro-icon';
+import { Image } from 'astro:assets';
 
 interface Props {
     tagline?: string,
     headline: string,
     subheadline: string
+    image: string,
+    alt: string,
     classes?: string;
 }
 
@@ -13,21 +16,30 @@ const {
     tagline,
     headline,
     subheadline,
+    image,
+    alt,
     classes,
     ...rest
 } = Astro.props as Props;
 
 ---
 
-<section id="homeHero">
+<section id="homeHero" class="section h-[87vh]">
     <div class="container">
-        <div class="container__inner">
-            <div class="groupTitle space-y-1">
-                <span class="tagline text-sm uppercase font-medium text-amber-800">{tagline}</span>
-                <h1 class="headline_huge text-4xl font-extrabold text-amber-500">{headline}</h1>
+        <div class="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-14">
+            <div class="homeHero__content h-full">
+                <div class="homeHero__groupTitle space-y-1">
+                    <span class="text-sm uppercase font-medium text-amber-700">{tagline}</span>
+                    <h1 class="block text-3xl font-bold text-amber-500 sm:text-4xl lg:text-6xl lg:leading-none">{headline}</h1>
+                </div>
+                <p class="mt-8 text-lg font-medium text-zinc-900">{subheadline}</p>
+        
+               
+
             </div>
-            <div class="subheadline-wrapper w-full">
-                <p class="sub__headline text-lg font-medium">{subheadline}</p>
+
+            <div class="homeHero__media relative h-full ml-4 overflow-hidden">
+                <img class="w-full rounded-lg" src={image} alt={alt}>
             </div>
         </div>
     </div>
