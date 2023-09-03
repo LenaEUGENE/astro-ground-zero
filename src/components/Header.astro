@@ -1,0 +1,22 @@
+---
+//import library
+import { Icon } from 'astro-icon';
+---
+<header class="w-full mx-auto flex justify-between items-center py-6 ">
+    <div class="container">
+        <div class="container__inner flex justify-between items-center">
+            <a href="/" id="header__logo"  class="flex items-center gap-x-4">
+                <Icon
+                    name="rocket-launch"
+                    class="text-amber-500 w-12 md:w-10 lg:w-12 xl:w-14"
+                />
+                <p class="uppercase text-base font-extrabold text-zinc-900">Astro <span class="text-amber-500">Ground Zero</span></p>
+            </a>
+            <ul class="nav__list flex gap-x-8">
+                <li class="nav__item"><a href="" class="nav__link text-zinc-900 font-medium p-1 hover:text-neutral-50 hover:bg-amber-500 transition duration-300 ease-in-out">Adventures</a></li>
+                <li class="nav__item"><a href="" class="nav__link text-zinc-900 font-medium p-1 hover:text-neutral-50 hover:bg-amber-500 transition duration-300 ease-in-out">About</a></li>
+                <li class="nav__item"><a href="" class="nav__link text-zinc-900 font-medium p-1 hover:text-neutral-50 hover:bg-amber-500 transition duration-300 ease-in-out">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>

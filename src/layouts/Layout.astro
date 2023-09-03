@@ -1,6 +1,8 @@
 --- 
+import "../styles/global.css";
+
 //import components
-import Header from
+import Header from "@components/Header.astro";
 interface Props {
 	title?: string;
 	description?: string;
@@ -26,6 +28,7 @@ const {
 		<title>{title}</title>
 	</head>
 	<body class="min-h-screen grid grid-rows-[auto, 1fr, auto]">
+		<Header />
 		<slot />
 	</body>
 </html>
